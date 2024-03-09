@@ -130,11 +130,15 @@ const App = observer(() => {
                 {/* Отфильтрованные группы */}
                 <Group header={<Header mode="secondary">Список сообществ</Header>}>
                   <ul className='px-4 pt-8'>
-                    {filteredGroups.map((group) => (
-                      <li key={group.id}>
-                        <GroupComponent name={group.name} />
-                      </li>
-                    ))}
+                    {filteredGroups.length >= 1 ?
+                      (filteredGroups.map((group) => (
+                        <li key={group.id}>
+                          <GroupComponent name={group.name} />
+                        </li>
+                      )))
+                      :
+                      <p className='text-xl text-center'>Подходящих по фильтру сообществ нет.</p>
+                    }
                   </ul>
                 </Group>
               </Panel>
