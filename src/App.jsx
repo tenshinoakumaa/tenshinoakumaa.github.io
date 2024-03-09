@@ -68,11 +68,7 @@ const App = observer(() => {
         // Если данные еще не загружены, будет отображено 'Загрузка...'
         <p className='pt-28 text-xl text-center'>Загрузка...</p>
       ) : (
-<<<<<<< Updated upstream
-        counterStore.groups.length>=1 ?
-=======
         counterStore.groups.length >= 1 ?
->>>>>>> Stashed changes
           (
             // Отображение основного контента
             <View activePanel={activePanel} className="max-w-xl mx-auto">
@@ -115,24 +111,15 @@ const App = observer(() => {
 
                   {/* Фильтр по наличию друзей в группе*/}
                   <div>
-<<<<<<< Updated upstream
-                    <SimpleCell className='Цвет аватарки'>
-=======
                     <SimpleCell className=''>
->>>>>>> Stashed changes
                       Наличие друзей
                     </SimpleCell>
                     {[false, true].map((value) => (
                       <SimpleCell
                         key={String(value)}
                         onClick={() => handleFriendsFilterChange(value)}
-<<<<<<< Updated upstream
-                        selected={!friendsFilter === value}
-                        style={{ backgroundColor: !friendsFilter === value ? '#E5E5E5' : 'transparent' }}
-=======
                         selected={friendsFilter === value}
                         style={{ backgroundColor: friendsFilter === value ? '#E5E5E5' : 'transparent' }}
->>>>>>> Stashed changes
                       >
                         {value ? 'Только с друзьями' : 'Все'}
                       </SimpleCell>
